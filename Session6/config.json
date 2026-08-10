@@ -1,0 +1,6 @@
+{
+  "appName": "Session6",
+  "version": "1.2.3",
+  "maxConnections": 100,
+  "debugMode": true
+}
