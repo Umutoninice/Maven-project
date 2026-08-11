@@ -50,7 +50,7 @@ public class BattleSimulator {
         System.out.println();
 
         List<BankAccount> accounts = new ArrayList<>();
-        savingAccount savings = new savingAccount("SAV001", "Alice", 1000, 5.0);
+        savingAccount savings = new savingAccount("SAV001", "Alice", 1000, 5.0,6);
         checkingAccount checking = new checkingAccount("CHK001", "Nice", 500, 25);
 
         accounts.add(savings);
@@ -60,44 +60,41 @@ public class BattleSimulator {
             System.out.println(account);
             account.deposit(5000);
             account.withdraw(2000);
+            account.applyYearlyInterest(6);
+        }
+            System.out.println();
+            System.out.println("=== PART 3: PRINTABLE INTERFACE ===");
+            System.out.println();
+            List<printable> printables = new ArrayList<>();
+            printables.add(new Student());
+            // printables.add(new Card("SPADES","ACE"));
+            printAll(printables);
+
+
+            System.out.println("=== PART 4: RPG CHARACTER SYSTEM ===\n");
+
+            // Create characters
+            Warrior warrior = new Warrior("Nice");
+            Mage mage = new Mage("Mellisa");
+            Rogue rogue = new Rogue("Peace");
+
+            // Battle 1: Warrior vs Mage
+            System.out.println("Match 1: Warrior vs Mage");
+            // Simulate(Warrior, Mage);
+            System.out.println();
+
+            // Reset health for next battle
+            System.out.println("Match 2: Rogue vs Warrior");
+            rogue = new Rogue("Peace"); // Reset health
+            //Simulate();
+            System.out.println();
+
+            // Battle 3: Rogue vs Mage
+            System.out.println("Match 3: Rogue vs Mage");
+            mage = new Mage("Mellisa"); // Reset health
+            //Simulate(rogue, mage);
+            System.out.println();
 
 
         }
-
-       System.out.println();
-        System.out.println("=== PART 3: PRINTABLE INTERFACE ===");
-        System.out.println();
-        List<printable> printables = new ArrayList<>();
-        printables.add(new Student());
-       // printables.add(new Card("SPADES","ACE"));
-        printAll(printables);
-
-
-
-       System.out.println("=== PART 4: RPG CHARACTER SYSTEM ===\n");
-
-        // Create characters
-        Warrior warrior = new Warrior("Nice");
-        Mage mage = new Mage("Mellisa");
-        Rogue rogue = new Rogue("Peace");
-
-        // Battle 1: Warrior vs Mage
-        System.out.println("Match 1: Warrior vs Mage");
-       // Simulate(Warrior, Mage);
-        System.out.println();
-
-        // Reset health for next battle
-        System.out.println("Match 2: Rogue vs Warrior");
-        rogue = new Rogue("Peace"); // Reset health
-        //Simulate();
-        System.out.println();
-
-        // Battle 3: Rogue vs Mage
-        System.out.println("Match 3: Rogue vs Mage");
-        mage = new Mage("Mellisa"); // Reset health
-        //Simulate(rogue, mage);
-        System.out.println();
-
-
-    }
 }

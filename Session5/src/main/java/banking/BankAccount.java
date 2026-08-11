@@ -84,5 +84,16 @@ public class BankAccount implements printable {
     public void printSummary() {
         System.out.println(" Owner: " + owner + " Account ID: " + accountId + " Balance: " +balance);
     }
+
+        public void applyYearlyInterest(double rate){
+            if (rate<0){
+                throw new IllegalArgumentException("rate can not be negative");
+            }
+            double interest= getBalance() * rate;
+            deposit(interest);
+            System.out.println("Owner: " + owner + " has got interest of " + interest + " On rate of " + rate);
+            System.out.println("The balance of owner: " + owner + " is " + balance);
+
+    }
 }
 
