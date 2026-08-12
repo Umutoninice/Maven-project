@@ -3,7 +3,7 @@ package org.example;
 public class HelloWorld {
     public static void main(String[] args) {
     String name = "Nice Umutoni";
-    int age = ;
+    int age = 23;
     double height_in_m = 1.62;
     boolean student = true;
     char grade = 'A';
